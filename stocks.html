@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class Activities - Stocks</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="stocks.html">Stocks</a></li>
+      <li><a href="dogs.html">Dogs</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h1>Stocks Dashboard</h1>
+    <form id="stockForm">
+      <input type="text" id="ticker" placeholder="Ticker (e.g. AAPL)" required>
+      <select id="days">
+        <option value="30">30 days</option>
+        <option value="60">60 days</option>
+        <option value="90">90 days</option>
+      </select>
+      <button class="btn" type="submit">Lookup</button>
+    </form>
+    <canvas id="stockChart"></canvas>
+    <h2>Top 5 Reddit Stocks</h2>
+    <table id="redditTable">
+      <thead>
+        <tr><th>Ticker</th><th>Comments</th><th>Sentiment</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </main>
+  <div class="audio-div">
+    <h4>Voice Commands:</h4>
+    <p>Say "Hello" to be greeted</p>
+    <p>Say "Change the color to blue"</p>
+    <p>Say "Navigate to stocks"</p>
+    <p>Say "Lookup MSFT" to auto-search</p>
+    <button onclick="annyang.pause()">Turn Off Audio</button>
+    <button onclick="annyang.resume()">Turn On Audio</button>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class Activities - Dogs</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="stocks.html">Stocks</a></li>
+      <li><a href="dogs.html">Dogs</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h1>Random Dogs</h1>
+    <!-- Carousel container -->
+    <div id="carousel" data-simple-slider style="width:100%;padding-bottom:25%"></div>
+
+    <!-- Simple-Slider script + fetch logic -->
+    <script src="https://rawgit.com/ruyadorno/simple-slider/master/dist/simpleslider.min.js"></script>
+    <script>
+      fetch("https://dog.ceo/api/breeds/image/random/10")
+        .then(res => res.json())
+        .then(data => {
+          const carousel = document.getElementById("carousel");
+          carousel.innerHTML = data.message.map(url => `<img src="${url}" />`).join('');
+          simpleslider.getSlider();
+        });
+    </script>
+
+    <h2>Dog Breeds</h2>
+    <div id="breed-buttons" class="home-buttons"></div>
+    <div id="breed-info" class="hidden">
+      <h3 id="breed-name"></h3>
+      <p id="breed-description"></p>
+      <p id="breed-lifespan"></p>
+    </div>
+  </main>
+  <div class="audio-div">
+    <h4>Voice Commands:</h4>
+    <p>"Load Dog Breed Beagle" shows breed info</p>
+    <p>"Navigate to home" opens Home page</p>
+    <button onclick="annyang.pause()">Turn Off Audio</button>
+    <button onclick="annyang.resume()">Turn On Audio</button>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
