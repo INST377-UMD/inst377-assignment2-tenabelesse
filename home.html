@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Class Activities - Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="stocks.html">Stocks</a></li>
+      <li><a href="dogs.html">Dogs</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Welcome to Class Activities</h1>
+    <div class="home-buttons">
+      <button class="btn" onclick="location.href='stocks.html'">Stocks</button>
+      <button class="btn" onclick="location.href='dogs.html'">Dogs</button>
+    </div>
+    <section id="quote">
+      <h2>Quote of the moment</h2>
+      <p id="quoteText">Loading...</p>
+    </section>
+  </main>
+
+  <div class="audio-div">
+    <h4>This page can be gavigated through audio! Make sure your mic is enabled to use this feature.</h4>
+        <p>Say: "Hello" It'll say Hello back to you!</p>
+        <p>To go to another page, Say: "Navigate to <page>"</p>
+        <p>To change the background color, Say: "Change the color to <color>"</p>
+        <p> Try it out for yourself!</p>
+    <button onclick="annyang.pause()">Turn Off Audio</button>
+    <button onclick="annyang.resume()">Turn On Audio</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+

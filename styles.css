@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffc0cb;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li { margin: 0; }
+  nav a {
+    color: #fff;
+    padding: 15px 20px;
+    display: block;
+    text-decoration: none;
+  }
+  nav li:hover { background: #555; }
+  nav a:hover { color: #ff0; }
+  
+  main {
+    padding: 20px;
+  }
+  
+  /* Center headings */
+  main h1,
+  #quote h2,
+  #quote p {
+    text-align: center;
+  }
+  
+  .home-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  /* Quote box styling */
+  #quote {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 10px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #008cba;
+    color: #fff;
+  }
+  .btn:hover { background: #005f5f; }
+  
+  .audio-div {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    box-sizing: border-box;
+  }
+  
+  .hidden { display: none; }
+  #carousel { width: 80%; margin: auto; }
+ 
